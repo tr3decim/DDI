@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM centos:8
 
-RUN apt-get update && apt-get install -y bind9 bind9utils bind9-doc
+RUN yum update -y && yum install -y bind bind-utils
 
 RUN mkdir -p /opt
 COPY ./entrypoint.sh /opt/entrypoint.sh
